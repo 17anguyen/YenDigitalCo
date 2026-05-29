@@ -89,7 +89,7 @@ export default function HomePage() {
               position: 'relative',
               width: '260px',
               height: '260px',
-              borderRadius: '50%',
+              borderRadius: '50px',
               overflow: 'hidden',
               flexShrink: 0,
             }}>
