@@ -531,7 +531,8 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 7rem;
-  align-items: center
+  align-items: center;
+  max-width: 680px
 }
 
 .about-visual {
