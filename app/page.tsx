@@ -70,23 +70,37 @@ export default function HomePage() {
         <span className="s-label">Selected Work</span>
         <h2 className="s-title">Crafted with calm<br /><em style={{ fontStyle: 'italic', color: 'rgba(238,242,244,0.5)' }}>execution</em></h2>
         <div className="work-grid">
-          <WorkCard videoSrc="/videos/senpai-squad-recap-2026.mp4"    label="Senpai Squad 2026"       cat="Nightlife · Video"  href="/video"   aspectRatio="16/9" />
-          <WorkCard src="/images/kawaii-rave-texas-2026/_A7R2807.jpg" label="Kawaii Rave Texas 2026"  cat="Nightlife · Photo"  href="/photos"  aspectRatio="4/3" />
-          <WorkCard src="/images/hoang-hiyu-2025/DSCF3379-2.jpg"      label="Hoang @ Hiyu 2025"       cat="Events · Photo"     href="/photos"  aspectRatio="16/9" />
-          <WorkCard videoSrc="/videos/juelz-b2b-san-holo.mp4"          label="Juelz b2b San Holo"      cat="Nightlife · Video"  href="/video"   aspectRatio="4/3" />
-          <WorkCard videoSrc="/videos/lil-texas-recap.mp4"            label="Lil Texas 2026"          cat="Nightlife · Video"  href="/video"   aspectRatio="16/9" />
-          <WorkCard src="/images/dj-isaac-2025/DSC00655.jpg"          label="DJ Isaac 2025"           cat="Nightlife · Photo"  href="/photos"  aspectRatio="4/3" />
+          <WorkCard videoSrc="/videos/senpai-squad-recap-2026.mp4" label="Senpai Squad 2026" cat="Nightlife · Video" href="/video" aspectRatio="16/9" />
+          <WorkCard src="/images/kawaii-rave-texas-2026/_A7R2807.jpg" label="Kawaii Rave Texas 2026" cat="Nightlife · Photo" href="/photos" aspectRatio="4/3" />
+          <WorkCard src="/images/hoang-hiyu-2025/DSCF3379-2.jpg" label="Hoang @ Hiyu 2025" cat="Events · Photo" href="/photos" aspectRatio="16/9" />
+          <WorkCard videoSrc="/videos/juelz-b2b-san-holo.mp4" label="Juelz b2b San Holo" cat="Nightlife · Video" href="/video" aspectRatio="4/3" />
+          <WorkCard videoSrc="/videos/lil-texas-recap.mp4" label="Lil Texas 2026" cat="Nightlife · Video" href="/video" aspectRatio="16/9" />
+          <WorkCard src="/images/dj-isaac-2025/DSC00655.jpg" label="DJ Isaac 2025" cat="Nightlife · Photo" href="/photos" aspectRatio="4/3" />
         </div>
       </div>
 
       <hr className="divline" />
 
       {/* ABOUT */}
-      <div className="section">
+      <div className="section" style={{ paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
         <div className="about-grid">
-          <div className="about-visual">
-            <div className="about-line" />
-            <div className="about-watermark">YDC</div>
+          <div className="about-visual" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{
+              position: 'relative',
+              width: '260px',
+              height: '260px',
+              borderRadius: '50px',
+              overflow: 'hidden',
+              flexShrink: 0,
+            }}>
+              <Image
+                src="/images/about-portrait.jpg"
+                alt="Portrait"
+                fill
+                sizes="260px"
+                style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+              />
+            </div>
           </div>
           <div className="about-text">
             <span className="s-label">About</span>
