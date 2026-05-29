@@ -84,7 +84,24 @@ export default function HomePage() {
       {/* ABOUT */}
       <div className="section" style={{ paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
         <div className="about-grid">
-          <div className="about-visual" style={{ display: 'none' }} />
+          <div className="about-visual" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{
+              position: 'relative',
+              width: '260px',
+              height: '260px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              flexShrink: 0,
+            }}>
+              <Image
+                src="/images/about-portrait.jpg"
+                alt="Portrait"
+                fill
+                sizes="260px"
+                style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+              />
+            </div>
+          </div>
           <div className="about-text">
             <span className="s-label">About</span>
             <h2 className="s-title">Calm craft.<br />Built to last.</h2>
