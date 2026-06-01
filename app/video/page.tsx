@@ -2,21 +2,23 @@
 import { useState, useRef } from 'react'
 
 /* ── Video data — src paths are relative to /public/videos/ ── */
-const VIDS = [
-  { src: '/videos/senpai-squad-recap-2026.mp4', t: 'Senpai Squad Recap',  c: ['Nightlife']              },
-  { src: '/videos/lil-texas-recap.mp4',         t: 'Lil Texas Recap',     c: ['Nightlife']              },
-  { src: '/videos/juelz-b2b-san-holo.mp4',      t: 'Juelz b2b San Holo', c: ['Nightlife']              },
-  { src: '/videos/bout-final.mp4',              t: 'Bout',                c: ['Automotive', 'Events']   },
-  { src: '/videos/dj-isaac-2025.mp4',           t: 'DJ Isaac 2025',       c: ['Nightlife']              },
+type VideoItem = { src?: string; t: string; c: string[]; grad?: string }
+
+const VIDS: VideoItem[] = [
+  { src: '/videos/senpai-squad-recap-2026.mp4', t: 'Senpai Squad Recap', c: ['Nightlife'] },
+  { src: '/videos/lil-texas-recap.mp4', t: 'Lil Texas Recap', c: ['Nightlife'] },
+  { src: '/videos/juelz-b2b-san-holo.mp4', t: 'Juelz b2b San Holo', c: ['Nightlife'] },
+  { src: '/videos/bout-final.mp4', t: 'Bout', c: ['Automotive', 'Events'] },
+  { src: '/videos/dj-isaac-2025.mp4', t: 'DJ Isaac 2025', c: ['Nightlife'] },
 ]
 
 const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive']
 
-function VideoCard({ item }: { item: typeof VIDS[0] }) {
+function VideoCard({ item }: { item: VideoItem }) {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const handleMouseEnter = () => {
-    videoRef.current?.play().catch(() => {})
+    videoRef.current?.play().catch(() => { })
   }
   const handleMouseLeave = () => {
     if (videoRef.current) {

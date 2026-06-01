@@ -5,7 +5,7 @@ export default function CursorGlow() {
   const glowRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const el = glowRef.current
+    const el = glowRef.current!
     if (!el) return
 
     let gx = window.innerWidth / 2, gy = window.innerHeight / 2
@@ -31,7 +31,7 @@ export default function CursorGlow() {
       gx += (gtx - gx) * 0.14
       gy += (gty - gy) * 0.14
       el.style.left = gx + 'px'
-      el.style.top  = gy + 'px'
+      el.style.top = gy + 'px'
       rafId = requestAnimationFrame(tick)
     }
     tick()
