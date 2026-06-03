@@ -1,15 +1,21 @@
 'use client'
 import { useState, useRef } from 'react'
 
+const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE || ''
+function videoUrl(p: string) {
+  if (!VIDEO_BASE) return p
+  return VIDEO_BASE.replace(/\/$/, '') + (p.startsWith('/') ? p : '/' + p)
+}
+
 /* ── Video data — src paths are relative to /public/videos/ ── */
 type VideoItem = { src?: string; t: string; c: string[]; grad?: string }
 
 const VIDS: VideoItem[] = [
-  { src: '/videos/senpai-squad-recap-2026.mp4', t: 'Senpai Squad Recap', c: ['Nightlife'] },
-  { src: '/videos/lil-texas-recap.mp4', t: 'Lil Texas Recap', c: ['Nightlife'] },
-  { src: '/videos/juelz-b2b-san-holo.mp4', t: 'Juelz b2b San Holo', c: ['Nightlife'] },
-  { src: '/videos/bout-final.mp4', t: 'Bout', c: ['Automotive', 'Events'] },
-  { src: '/videos/dj-isaac-2025.mp4', t: 'DJ Isaac 2025', c: ['Nightlife'] },
+  { src: videoUrl('/videos/senpai-squad-recap-2026.mp4'), t: 'Senpai Squad Recap', c: ['Nightlife'] },
+  { src: videoUrl('/videos/lil-texas-recap.mp4'), t: 'Lil Texas Recap', c: ['Nightlife'] },
+  { src: videoUrl('/videos/juelz-b2b-san-holo.mp4'), t: 'Juelz b2b San Holo', c: ['Nightlife'] },
+  { src: videoUrl('/videos/bout-final.mp4'), t: 'Bout', c: ['Automotive', 'Events'] },
+  { src: videoUrl('/videos/dj-isaac-2025.mp4'), t: 'DJ Isaac 2025', c: ['Nightlife'] },
 ]
 
 const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive']
