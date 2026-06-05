@@ -1,5 +1,6 @@
 [build]
 command = "npm run build"
+environment = { SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_VIDEO_BASE" }
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
