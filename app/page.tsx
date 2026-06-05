@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE || ''
+const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE || 'https://pub-28a37ca9f30345e7a8a22f258f719aa3.r2.dev'
 function videoUrl(p: string) {
   if (!VIDEO_BASE) return p
   return VIDEO_BASE.replace(/\/$/, '') + (p.startsWith('/') ? p : '/' + p)
