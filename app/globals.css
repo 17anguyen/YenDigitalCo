@@ -820,7 +820,7 @@ nav {
   font-family: var(--hf);
   font-size: 1.35rem;
   font-weight: 400;
-  color: var(--di);
+  color: var(--jq);
   line-height: 1.2
 }
 
@@ -837,16 +837,16 @@ nav {
   gap: 0.5rem;
   margin-top: auto;
   padding-top: 0.75rem;
-  border-top: 0.5px solid var(--di, rgba(168, 195, 160, 0.1));
+  border-top: 0.5px solid var(--jq, rgba(168, 195, 160, 0.1));
 }
 
 .cs-tag {
   font-size: 8px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--di);
+  color: var(--jq);
   padding: 0.25rem 0.6rem;
-  border: 0.5px solid var(--di, rgba(168, 195, 160, 0.1));
+  border: 0.5px solid var(--jq, rgba(168, 195, 160, 0.1));
 }
 
 /* ─── GALLERY FILTERS ────────────────────────────────────────────────── */

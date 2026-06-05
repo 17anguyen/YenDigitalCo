@@ -113,7 +113,7 @@ export default function HomePage() {
           <div className="svc">
             <div className="svc-n">01</div>
             <div className="svc-name">Video Production</div>
-            <p className="svc-desc">Cinematic coverage from nightlife, automotive, and live events to products. From concept to final cut, slow pans, intentional transitions, and a visual style built around capturingatmosphere and energy.</p>
+            <p className="svc-desc">Cinematic coverage from nightlife, automotive, and live events to products. From concept to final cut, slow pans, intentional transitions, and a visual style built around capturing atmosphere and energy.</p>
           </div>
           <div className="svc">
             <div className="svc-n">02</div>
@@ -251,17 +251,17 @@ export default function HomePage() {
       <div className="section">
         <span className="s-label">Retainer Packages</span>
         <h2 className="s-title">Steady support,<br />month after month</h2>
-        <p className="s-body" style={{ marginBottom: '2.5rem' }}>Whether you need your marketing scaled or your website kept sharp, our retainers keep things moving — without you having to think about it.</p>
+        <p className="s-body" style={{ marginBottom: '2.5rem' }}>Whether you need your marketing scaled or your website kept sharp, our retainers keep things moving.</p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5px' }}>
           <Link href="/retainers" className="svc" style={{ cursor: 'pointer', textDecoration: 'none' }}>
             <div className="svc-n" style={{ color: 'rgba(168,195,160,0.18)' }}>↗</div>
             <div className="svc-name">Marketing Retainers</div>
-            <p className="svc-desc">Social content, strategy, analytics, and scheduling — handled end to end. Three tiers built to match where your brand is right now.</p>
+            <p className="svc-desc">Social content, strategy, analytics, and scheduling handled end to end. Three tiers built to match where your brand is right now.</p>
           </Link>
           <Link href="/retainers" className="svc" style={{ cursor: 'pointer', textDecoration: 'none' }}>
             <div className="svc-n" style={{ color: 'rgba(216,191,166,0.18)' }}>↗</div>
             <div className="svc-name">Website Retainers</div>
-            <p className="svc-desc">Maintenance, updates, SEO monitoring, and performance reporting. Your site, always running — so you never have to chase it.</p>
+            <p className="svc-desc">Maintenance, updates, SEO monitoring, and performance reporting. Your site, always running so you never have to chase it.</p>
           </Link>
         </div>
         <div style={{ textAlign: 'center', marginTop: '3rem' }}>
