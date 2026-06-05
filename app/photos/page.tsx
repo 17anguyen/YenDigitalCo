@@ -35,7 +35,7 @@ function GalleryViewer({
   onOpenLightbox: (i: number) => void
 }) {
   const [mainIdx, setMainIdx] = useState(initialIndex)
-  const [paused, setPaused]   = useState(false)
+  const [paused, setPaused] = useState(false)
   const thumbsRef = useRef<HTMLDivElement>(null)
   const activeThumbRef = useRef<HTMLButtonElement>(null)
 
@@ -60,7 +60,7 @@ function GalleryViewer({
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft')  prev()
+      if (e.key === 'ArrowLeft') prev()
       if (e.key === 'ArrowRight') next()
     }
     window.addEventListener('keydown', onKey)
@@ -198,13 +198,13 @@ function navBtn(side: 'left' | 'right'): React.CSSProperties {
 /* ── Page ───────────────────────────────────────────────────────────────── */
 export default function PhotosPage() {
   const [activeFilter, setActiveFilter] = useState('All')
-  const [activeEvent, setActiveEvent]   = useState('All')
-  const [viewMode, setViewMode]         = useState<'grid' | 'gallery'>('grid')
-  const [lightboxIdx, setLightboxIdx]   = useState<number | null>(null)
+  const [activeEvent, setActiveEvent] = useState('All')
+  const [viewMode, setViewMode] = useState<'grid' | 'gallery'>('grid')
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null)
 
   const visible = PHOTOS.filter(p => {
     const matchFilter = activeFilter === 'All' || p.category === activeFilter
-    const matchEvent  = activeEvent  === 'All' || p.event    === activeEvent
+    const matchEvent = activeEvent === 'All' || p.event === activeEvent
     return matchFilter && matchEvent
   })
 
@@ -212,17 +212,17 @@ export default function PhotosPage() {
   const closeLightbox = () => setLightboxIdx(null)
   const prev = useCallback(() =>
     setLightboxIdx(i => i === null ? null : (i - 1 + visible.length) % visible.length)
-  , [visible.length])
+    , [visible.length])
   const next = useCallback(() =>
     setLightboxIdx(i => i === null ? null : (i + 1) % visible.length)
-  , [visible.length])
+    , [visible.length])
 
   useEffect(() => {
     if (lightboxIdx === null) return
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft')  prev()
+      if (e.key === 'ArrowLeft') prev()
       if (e.key === 'ArrowRight') next()
-      if (e.key === 'Escape')     closeLightbox()
+      if (e.key === 'Escape') closeLightbox()
     }
     window.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
@@ -330,16 +330,24 @@ export default function PhotosPage() {
             position: 'fixed', inset: 0, zIndex: 9999,
             background: 'rgba(6,11,16,0.97)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: '2rem',
           }}
         >
-          <div onClick={e => e.stopPropagation()} style={{ position: 'relative', maxWidth: '92vw', maxHeight: '92vh' }}>
-            <Image
-              src={visible[lightboxIdx].src}
-              alt={visible[lightboxIdx].caption ?? visible[lightboxIdx].event}
-              width={1800} height={1200}
-              style={{ maxWidth: '92vw', maxHeight: '92vh', width: 'auto', height: 'auto', objectFit: 'contain', display: 'block' }}
-              priority
-            />
+          <div onClick={e => e.stopPropagation()} className="lightbox-stack" style={{ maxWidth: '90vw', maxHeight: '90vh' }}>
+            {/* Background card layers */}
+            <div className="lightbox-stack-card" style={{ background: 'rgba(168,195,160,0.08)', border: '0.5px solid rgba(168,195,160,0.15)', borderRadius: '4px' }}></div>
+            <div className="lightbox-stack-card" style={{ background: 'rgba(168,195,160,0.04)', border: '0.5px solid rgba(168,195,160,0.08)', borderRadius: '4px' }}></div>
+
+            {/* Main image */}
+            <div className="lightbox-stack-card" style={{ borderRadius: '4px', overflow: 'hidden' }}>
+              <Image
+                src={visible[lightboxIdx].src}
+                alt={visible[lightboxIdx].caption ?? visible[lightboxIdx].event}
+                width={1800} height={1200}
+                style={{ maxWidth: '90vw', maxHeight: '90vh', width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                priority
+              />
+            </div>
           </div>
 
           <button onClick={closeLightbox} style={{ position: 'fixed', top: '1.5rem', right: '2rem', background: 'none', border: '0.5px solid rgba(168,195,160,0.25)', color: 'rgba(238,242,244,0.6)', fontFamily: 'var(--bf)', fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', padding: '0.5rem 1rem', cursor: 'pointer', zIndex: 10000 }}>

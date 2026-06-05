@@ -71,7 +71,7 @@ export default function HomePage() {
       <hr className="divline" />
 
       {/* SELECTED WORK */}
-      <div className="section">
+      <div className="section parallax-section">
         <span className="s-label">Selected Work</span>
         <h2 className="s-title">Crafted with calm<br /><em style={{ fontStyle: 'italic', color: 'rgba(238,242,244,0.5)' }}>execution</em></h2>
         <div className="work-grid">
@@ -87,7 +87,7 @@ export default function HomePage() {
       <hr className="divline" />
 
       {/* ABOUT */}
-      <div className="section" style={{ paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
+      <div className="section parallax-section" style={{ paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
         <div className="about-grid">
           <div className="about-visual" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{
@@ -120,7 +120,7 @@ export default function HomePage() {
       <hr className="divline" />
 
       {/* SERVICES */}
-      <div className="section">
+      <div className="section parallax-section">
         <span className="s-label">Services</span>
         <h2 className="s-title">What we do</h2>
         <div className="svc-grid">
@@ -145,7 +145,7 @@ export default function HomePage() {
       <hr className="divline" />
 
       {/* CASE STUDIES */}
-      <div className="section">
+      <div className="section parallax-section">
         <span className="s-label">Client Work</span>
         <h2 className="s-title">Companies we&apos;ve<br />worked with</h2>
         <p className="s-body">A selection of brands, venues, and businesses we&apos;ve supported from one-off shoots to ongoing retainers.</p>
