@@ -89,23 +89,14 @@ export default function HomePage() {
       {/* ABOUT */}
       <div className="section parallax-section" style={{ paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
         <div className="about-grid">
-          <div className="about-visual" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{
-              position: 'relative',
-              width: '260px',
-              height: '260px',
-              borderRadius: '50px',
-              overflow: 'hidden',
-              flexShrink: 0,
-            }}>
-              <Image
-                src="/images/about-portrait.jpg"
-                alt="Portrait"
-                fill
-                sizes="260px"
-                style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
-              />
-            </div>
+          <div className="about-visual" style={{ position: 'relative' }}>
+            <Image
+              src="/images/about-portrait.jpg"
+              alt="Portrait"
+              fill
+              sizes="50vw"
+              style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+            />
           </div>
           <div className="about-text">
             <span className="s-label">About</span>
