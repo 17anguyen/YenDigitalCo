@@ -618,10 +618,11 @@ nav {
 /* ─── ABOUT ──────────────────────────────────────────────────────────── */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 7rem;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6rem;
   align-items: center;
-  max-width: 680px
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .about-visual {
