@@ -1,7 +1,7 @@
 /* ============================================================
    Yên Digital Company — Main Stylesheet
    Brand: Deep Ink #0E1B2A · Mist Gray #EEF2F4
-          Jade Quiet #A8C3A0 · Warm Sand #D8BFA6
+          Jade Quiet #A8C3A0 · Warm Sand #faf5ed · Olive Grove #545b43
    Fonts: Cormorant Garamond (headings) · Inter (body/UI)
    ============================================================ */
 
@@ -16,10 +16,11 @@
 }
 
 :root {
-  --dk: #0E1B2A;
+  --dk: #545b43;
+  --di: #0E1B2A;
   --mg: #EEF2F4;
   --jq: #A8C3A0;
-  --ws: #D8BFA6;
+  --ws: #faf5ed;
   --hf: 'Cormorant Garamond', serif;
   --bf: 'Inter', sans-serif;
 }
@@ -48,10 +49,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.4rem 4rem;
-  background: rgba(14, 27, 42, 0.9);
+  background: var(--dk);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 0.5px solid rgba(168, 195, 160, 0.1);
+  border-bottom: 0.5px solid rgba(84, 91, 67, 0.18);
 }
 
 .logo {
@@ -90,7 +91,7 @@ nav {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--jq);
-  border-bottom-color: rgba(168, 195, 160, 0.4)
+  border-bottom-color: var(--jq)
 }
 
 /* ─── MOVING GRADIENT (shared hero class) ───────────────────────────── */
@@ -130,6 +131,58 @@ nav {
     --ga: -40deg;
     background-position: 0% 50%
   }
+}
+
+/* ─── CARD STACKING ANIMATIONS ────────────────────────────────────────── */
+@keyframes stackIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.lightbox-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  perspective: 1200px;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox-stack>* {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.lightbox-stack-card {
+  animation: stackIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.lightbox-stack-card:nth-child(3) {
+  animation-delay: 0s;
+  transform: translateY(24px) scale(0.94);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.lightbox-stack-card:nth-child(2) {
+  animation-delay: 0.08s;
+  transform: translateY(12px) scale(0.97);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.lightbox-stack-card:nth-child(1) {
+  animation-delay: 0.16s;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  z-index: 3;
 }
 
 .grad {
@@ -377,7 +430,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 5rem;
+  padding-top: 2.5rem;
   text-align: center;
 }
 
@@ -410,7 +463,7 @@ nav {
 
 /* ─── GLOBAL SECTIONS ────────────────────────────────────────────────── */
 .section {
-  padding: 7rem 4rem;
+  padding: 3.5rem 4rem;
   max-width: 1440px;
   margin: 0 auto
 }
@@ -445,6 +498,25 @@ nav {
   border: none;
   border-top: 0.5px solid rgba(168, 195, 160, 0.1);
   margin: 0
+}
+
+/* ─── PARALLAX SCROLL ANIMATIONS ──────────────────────────────────────── */
+@keyframes parallaxUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+.parallax-section {
+  animation: parallaxUp linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
 }
 
 /* ─── WORK GRID ──────────────────────────────────────────────────────── */
@@ -614,7 +686,7 @@ nav {
 }
 
 .svc {
-  padding: 2.75rem 2rem;
+  padding: 1.375rem 2rem;
   border: 0.5px solid rgba(168, 195, 160, 0.07);
   transition: all 0.35s;
   position: relative;
@@ -676,7 +748,7 @@ nav {
 }
 
 .cs-card {
-  padding: 2.5rem 2rem 2rem;
+  padding: 1.25rem 2rem 2rem;
   border: 0.5px solid rgba(168, 195, 160, 0.08);
   position: relative;
   overflow: hidden;
@@ -981,7 +1053,7 @@ nav {
 }
 
 .ret-card {
-  padding: 2.5rem 2rem;
+  padding: 1.25rem 2rem;
   border: 0.5px solid rgba(168, 195, 160, 0.1);
   position: relative;
   transition: all 0.35s;
