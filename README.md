@@ -1,4 +1,5 @@
 # Yên Digital Company — Website
+YenDigital.co
 
 ## Project structure
 
