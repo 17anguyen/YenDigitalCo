@@ -1,6 +1,7 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { videoUrl } from '@/lib/videos'
+import BannerVideo from '@/components/banner-video'
 
 type VideoItem = { src?: string; t: string; c: string[]; grad?: string }
 
