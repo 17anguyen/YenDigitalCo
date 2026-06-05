@@ -76,11 +76,11 @@ export default function HomePage() {
         <span className="s-label">Selected Work</span>
         <h2 className="s-title">Crafted with calm<br /><em style={{ fontStyle: 'italic', color: 'rgba(238,242,244,0.5)' }}>execution</em></h2>
         <div className="work-grid">
-          <WorkCard videoSrc={videoUrl('/videos/senpai-squad-recap-2026.mp4')} label="Senpai Squad 2026" cat="Nightlife · Video" href="/video" aspectRatio="16/9" />
+          <WorkCard videoSrc={videoUrl('/senpai-squad-recap-2026.mp4')} label="Senpai Squad 2026" cat="Nightlife · Video" href="/video" aspectRatio="16/9" />
           <WorkCard src="/images/kawaii-rave-texas-2026/_A7R2807.jpg" label="Kawaii Rave Texas 2026" cat="Nightlife · Photo" href="/photos" aspectRatio="4/3" />
           <WorkCard src="/images/hoang-hiyu-2025/DSCF3379-2.jpg" label="Hoang @ Hiyu 2025" cat="Events · Photo" href="/photos" aspectRatio="16/9" />
-          <WorkCard videoSrc={videoUrl('/videos/juelz-b2b-san-holo.mp4')} label="Juelz b2b San Holo" cat="Nightlife · Video" href="/video" aspectRatio="4/3" />
-          <WorkCard videoSrc={videoUrl('/videos/lil-texas-recap.mp4')} label="Lil Texas 2026" cat="Nightlife · Video" href="/video" aspectRatio="16/9" />
+          <WorkCard videoSrc={videoUrl('/juelz-b2b-san-holo.mp4')} label="Juelz b2b San Holo" cat="Nightlife · Video" href="/video" aspectRatio="4/3" />
+          <WorkCard videoSrc={videoUrl('/lil-texas-recap.mp4')} label="Lil Texas 2026" cat="Nightlife · Video" href="/video" aspectRatio="16/9" />
           <WorkCard src="/images/dj-isaac-2025/DSC00655.jpg" label="DJ Isaac 2025" cat="Nightlife · Photo" href="/photos" aspectRatio="4/3" />
         </div>
       </div>
