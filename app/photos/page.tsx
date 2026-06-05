@@ -255,8 +255,8 @@ export default function PhotosPage() {
           ))}
         </div>
 
-        {/* Event filter */}
-        <div className="filter-bar" style={{ marginTop: '0.75rem', borderBottom: 'none', paddingBottom: 0 }}>
+        {/* Event filter — buttons on desktop, dropdown on mobile */}
+        <div className="filter-bar event-filter-desktop" style={{ marginTop: '0.75rem', borderBottom: 'none', paddingBottom: 0 }}>
           <button className={`filter-btn${activeEvent === 'All' ? ' on' : ''}`} onClick={() => setActiveEvent('All')}>
             All Events
           </button>
@@ -265,6 +265,18 @@ export default function PhotosPage() {
               {e.label}
             </button>
           ))}
+        </div>
+        <div className="event-filter-mobile">
+          <select
+            value={activeEvent}
+            onChange={ev => setActiveEvent(ev.target.value)}
+            className="event-select"
+          >
+            <option value="All">All Events</option>
+            {EVENTS.map(e => (
+              <option key={e.id} value={e.id}>{e.label}</option>
+            ))}
+          </select>
         </div>
 
         {/* Count + view toggle */}
