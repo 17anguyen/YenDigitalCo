@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useEffect, useCallback } from 'react'
+import BannerVideo from '@/components/banner-video'
 
 const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE || 'https://pub-28a37ca9f30345e7a8a22f258f719aa3.r2.dev'
 function videoUrl(p: string) {
@@ -122,6 +123,7 @@ function VideoLightbox({ item, onClose }: { item: VideoItem; onClose: () => void
   )
 }
 
+
 export default function VideoPage() {
   const [active, setActive] = useState('All')
   const [lightboxItem, setLightboxItem] = useState<VideoItem | null>(null)
@@ -130,7 +132,8 @@ export default function VideoPage() {
 
   return (
     <>
-      <div className="inner-hero grad page-in">
+      <div className="inner-hero page-in" style={{ position: 'relative' }}>
+        <BannerVideo />
         <div className="hero-glow" />
         <div className="inner-hero-content">
           <span className="inner-label">Video Gallery</span>

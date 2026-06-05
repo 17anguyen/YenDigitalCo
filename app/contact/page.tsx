@@ -1,9 +1,11 @@
 import ContactForm from '../../components/contact-form'
+import BannerVideo from '../../components/banner-video'
 
 export default function ContactPage() {
   return (
     <>
-      <div className="inner-hero grad page-in">
+      <div className="inner-hero page-in" style={{ position: 'relative' }}>
+        <BannerVideo />
         <div className="hero-glow" />
         <div className="inner-hero-content">
           <span className="inner-label">Contact</span>
