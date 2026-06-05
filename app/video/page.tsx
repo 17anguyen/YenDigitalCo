@@ -117,6 +117,7 @@ function VideoLightbox({ item, onClose }: { item: VideoItem; onClose: () => void
   )
 }
 
+
 export default function VideoPage() {
   const [active, setActive] = useState('All')
   const [lightboxItem, setLightboxItem] = useState<VideoItem | null>(null)
@@ -125,7 +126,8 @@ export default function VideoPage() {
 
   return (
     <>
-      <div className="inner-hero grad page-in">
+      <div className="inner-hero page-in" style={{ position: 'relative' }}>
+        <BannerVideo />
         <div className="hero-glow" />
         <div className="inner-hero-content">
           <span className="inner-label">Video Gallery</span>
