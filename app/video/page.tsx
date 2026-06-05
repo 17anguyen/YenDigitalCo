@@ -3,17 +3,23 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { videoUrl } from '@/lib/videos'
 import BannerVideo from '@/components/banner-video'
 
-type VideoItem = { src?: string; poster?: string; t: string; c: string[]; grad?: string }
+type VideoItem = { src?: string; poster?: string; t: string; c: string[]; client?: string; grad?: string }
 
 const VIDS: VideoItem[] = [
   { src: videoUrl('/senpai-squad-recap-2026.mp4'), poster: '/images/thumbs/senpai-squad.jpg', t: 'Senpai Squad Recap', c: ['Nightlife'] },
-  { src: videoUrl('/lil-texas-recap.mp4'), poster: '/images/thumbs/lil-texas.jpg', t: 'Lil Texas Recap', c: ['Nightlife'] },
-  { src: videoUrl('/juelz-b2b-san-holo.mp4'), poster: '/images/thumbs/juelz-san-holo.jpg', t: 'Juelz b2b San Holo', c: ['Nightlife'] },
-  { src: videoUrl('/final-bout.mp4'), poster: '/images/thumbs/final-bout.jpg', t: 'Bout', c: ['Automotive', 'Events'] },
-  { src: videoUrl('/dj-isaac-2025.mp4'), poster: '/images/thumbs/dj-isaac.jpg', t: 'DJ Isaac 2025', c: ['Nightlife'] },
+  { src: videoUrl('/lil-texas-recap.mp4'),         poster: '/images/thumbs/lil-texas.jpg',    t: 'Lil Texas Recap',   c: ['Nightlife'] },
+  { src: videoUrl('/juelz-b2b-san-holo.mp4'),      poster: '/images/thumbs/juelz-san-holo.jpg', t: 'Juelz b2b San Holo', c: ['Nightlife'] },
+  { src: videoUrl('/final-bout.mp4'),              poster: '/images/thumbs/final-bout.jpg',   t: 'Bout',              c: ['Automotive', 'Events'] },
+  { src: videoUrl('/dj-isaac-2025.mp4'),           poster: '/images/thumbs/dj-isaac.jpg',     t: 'DJ Isaac 2025',     c: ['Nightlife'] },
+  { src: '/videos/et-marketing-lip-head-styles.mp4',        t: 'Lip Head Styles',          c: ['Promotional'], client: 'express-tubes' },
+  { src: '/videos/et-marketing-star-orifice-marble-cap.mp4', t: 'Star Orifice Marble Cap', c: ['Promotional'], client: 'express-tubes' },
 ]
 
-const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive']
+const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive', 'Promotional']
+
+const CLIENTS = [
+  { id: 'express-tubes', label: 'Express Tubes' },
+]
 
 function VideoCard({ item, onOpen }: { item: VideoItem; onOpen: () => void }) {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -55,7 +61,7 @@ function VideoCard({ item, onOpen }: { item: VideoItem; onOpen: () => void }) {
       )}
       <div className="gi-over">
         <div className="play-ring"><div className="play-tri" /></div>
-        <div className="gi-title">{item.c.join(' · ')} · {item.t}</div>
+        <div className="gi-title">{item.t}</div>
       </div>
     </div>
   )
@@ -120,12 +126,26 @@ function VideoLightbox({ item, onClose }: { item: VideoItem; onClose: () => void
   )
 }
 
-
 export default function VideoPage() {
   const [active, setActive] = useState('All')
+  const [activeClient, setActiveClient] = useState('All')
   const [lightboxItem, setLightboxItem] = useState<VideoItem | null>(null)
 
-  const visible = active === 'All' ? VIDS : VIDS.filter(v => v.c.includes(active))
+  const visibleClients = active === 'Promotional'
+    ? CLIENTS
+    : CLIENTS.filter(cl => VIDS.some(v => v.c.includes(active) && v.client === cl.id))
+
+  const visible = VIDS.filter(v => {
+    const matchCat = active === 'All' || v.c.includes(active)
+    const matchClient = activeClient === 'All' || v.client === activeClient
+    return matchCat && matchClient
+  })
+
+  // Reset client filter when category changes
+  const handleCategoryChange = (f: string) => {
+    setActive(f)
+    setActiveClient('All')
+  }
 
   return (
     <>
@@ -141,11 +161,34 @@ export default function VideoPage() {
       <div className="section">
         <span className="s-label">Reel</span>
         <h2 className="s-title">Cinematic work</h2>
+
+        {/* Category filter */}
         <div className="filter-bar">
           {FILTERS.map(f => (
-            <button key={f} className={`filter-btn${active === f ? ' on' : ''}`} onClick={() => setActive(f)}>{f}</button>
+            <button key={f} className={`filter-btn${active === f ? ' on' : ''}`} onClick={() => handleCategoryChange(f)}>{f}</button>
           ))}
         </div>
+
+        {/* Client sub-filter — desktop buttons */}
+        {active === 'Promotional' && (
+          <>
+            <div className="filter-bar event-filter-desktop" style={{ marginTop: '0.75rem', borderBottom: 'none', paddingBottom: 0 }}>
+              <button className={`filter-btn${activeClient === 'All' ? ' on' : ''}`} onClick={() => setActiveClient('All')}>All Clients</button>
+              {CLIENTS.map(cl => (
+                <button key={cl.id} className={`filter-btn${activeClient === cl.id ? ' on' : ''}`} onClick={() => setActiveClient(cl.id)}>{cl.label}</button>
+              ))}
+            </div>
+            <div className="event-filter-mobile">
+              <select value={activeClient} onChange={e => setActiveClient(e.target.value)} className="event-select">
+                <option value="All">All Clients</option>
+                {CLIENTS.map(cl => (
+                  <option key={cl.id} value={cl.id}>{cl.label}</option>
+                ))}
+              </select>
+            </div>
+          </>
+        )}
+
         <div className="gal-grid">
           {visible.map((v, i) => (
             <VideoCard key={i} item={v} onOpen={() => setLightboxItem(v)} />

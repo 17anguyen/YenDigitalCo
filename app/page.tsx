@@ -149,41 +149,90 @@ export default function HomePage() {
               <span className="cs-tag">Website</span>
             </div>
           </a>
-          {[
-            { tags: ['Video', 'Tag Two'] },
-            // { tags: ['Photography', 'Tag Two'] },
-            // { tags: ['Web', 'Tag Two'] },
-            // { tags: ['Nightlife', 'Tag Two'] },
-            // { tags: ['Automotive', 'Tag Two'] },
-            // { tags: ['Marketing', 'Tag Two'] },
-            // { tags: ['Branding', 'Tag Two'] },
-          ].map((item, i) => (
-            <a key={i} className="cs-card" href="https://onebyfaith.co" target="_blank" rel="noopener noreferrer">
-              <div className="cs-logo-box">OBF</div>
-              <div>
-                <div className="cs-company">One by Faith</div>
-                <div className="cs-name">Brand Sculpting and Website Management</div>
-              </div>
-              <p className="cs-what">We worked with One by Faith from concept to completion to create a comprehensive brand identity and a custom website that reflects their values and mission. We helped them establish a brand identity and created guidlines. We creafted strong online presence that aligns with their brand vision. </p>
-              <div className="cs-tags">
-                <span className="cs-tag">Branding</span>
-                <span className="cs-tag">Website</span>
-                <span className="cs-tag">Marketing</span>
-              </div>
-            </a>
-          ))}
-
+          <a className="cs-card" href="https://onebyfaith.co" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">OBF</div>
+            <div>
+              <div className="cs-company">One by Faith</div>
+              <div className="cs-name">Brand Sculpting and Website Management</div>
+            </div>
+            <p className="cs-what">We worked with One by Faith from concept to completion to create a comprehensive brand identity and a custom website that reflects their values and mission. We helped them establish a brand identity, created guidelines, and crafted a strong online presence that aligns with their brand vision.</p>
+            <div className="cs-tags">
+              <span className="cs-tag">Branding</span>
+              <span className="cs-tag">Website</span>
+              <span className="cs-tag">Marketing</span>
+            </div>
+          </a>
           <a className="cs-card" href="https://zombieghostgames.com/" target="_blank" rel="noopener noreferrer">
             <div className="cs-logo-box">ZGG</div>
             <div>
               <div className="cs-company">Zombie Ghost Games</div>
               <div className="cs-name">Website Management and Content Creation</div>
             </div>
-            <p className="cs-what">We worked with Zombie Ghost Games to manage their website and create engaging content. </p>
+            <p className="cs-what">We worked with Zombie Ghost Games to manage their website and create engaging content.</p>
             <div className="cs-tags">
               <span className="cs-tag">Video</span>
               <span className="cs-tag">Photography</span>
               <span className="cs-tag">Website</span>
+            </div>
+          </a>
+          <a className="cs-card" href="https://www.insomniac.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">I</div>
+            <div>
+              <div className="cs-company">Insomniac Events</div>
+              <div className="cs-name">Event Photography and Video</div>
+            </div>
+            <p className="cs-what">We worked with Insomniac Events capturing live shows in both photo and video.</p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+            </div>
+          </a>
+          <a className="cs-card" href="https://www.whiterabbitgrp.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">WRG</div>
+            <div>
+              <div className="cs-company">White Rabbit Group</div>
+              <div className="cs-name">Event Photography and Video</div>
+            </div>
+            <p className="cs-what">We worked with White Rabbit Group to capture their events in both photo and video.</p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+            </div>
+          </a>
+          <a className="cs-card" href="https://onthehiyu.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">OTH</div>
+            <div>
+              <div className="cs-company">On The Hi-Yu</div>
+              <div className="cs-name">Event Photography and Video</div>
+            </div>
+            <p className="cs-what">We worked with On The Hi-Yu to capture their events in both photo and video.</p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+            </div>
+          </a>
+          <a className="cs-card" href="https://www.instagram.com/cult_fest/?hl=en" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">CF</div>
+            <div>
+              <div className="cs-company">Cult Fest</div>
+              <div className="cs-name">Event Photography and Video</div>
+            </div>
+            <p className="cs-what">We worked with Cult Fest to capture their events in both photo and video.</p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+            </div>
+          </a>
+          <a className="cs-card" href="https://www.browniesandlemonade.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">B&amp;L</div>
+            <div>
+              <div className="cs-company">Brownies and Lemonade</div>
+              <div className="cs-name">Event Photography and Video</div>
+            </div>
+            <p className="cs-what">We worked with Brownies and Lemonade to capture their events in both photo and video.</p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
             </div>
           </a>
         </div>
