@@ -1,11 +1,6 @@
 'use client'
 import { useState, useRef } from 'react'
-
-const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE || 'https://pub-28a37ca9f30345e7a8a22f258f719aa3.r2.dev'
-function videoUrl(p: string) {
-  if (!VIDEO_BASE) return p
-  return VIDEO_BASE.replace(/\/$/, '') + (p.startsWith('/') ? p : '/' + p)
-}
+import { videoUrl } from '@/lib/videos'
 
 /* ── Video data — src paths are relative to /public/videos/ ── */
 type VideoItem = { src?: string; t: string; c: string[]; grad?: string }
