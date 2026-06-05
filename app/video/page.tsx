@@ -1,11 +1,6 @@
 'use client'
-import { useState, useRef, useEffect, useCallback } from 'react'
-
-const VIDEO_BASE = process.env.NEXT_PUBLIC_VIDEO_BASE || 'https://pub-28a37ca9f30345e7a8a22f258f719aa3.r2.dev'
-function videoUrl(p: string) {
-  if (!VIDEO_BASE) return p
-  return VIDEO_BASE.replace(/\/$/, '') + (p.startsWith('/') ? p : '/' + p)
-}
+import { useState, useRef } from 'react'
+import { videoUrl } from '@/lib/videos'
 
 type VideoItem = { src?: string; t: string; c: string[]; grad?: string }
 
