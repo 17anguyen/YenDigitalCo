@@ -22,7 +22,7 @@ export default function RetainersPage() {
           </div>
         </div>
         <div className="ret-grid">
-          <div className="ret-card">
+          <div className="ret-card peach-hover">
             <div className="ret-tier">Essential</div>
             <div className="ret-name">Presence</div>
             <div className="ret-price"><sup>$</sup>650<span>/mo</span></div>
@@ -56,7 +56,7 @@ export default function RetainersPage() {
             </ul>
             <div className="ret-cta"><Link href="/contact" className="btn-ret" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>Get Started</Link></div>
           </div>
-          <div className="ret-card">
+          <div className="ret-card peach-hover">
             <div className="ret-tier">Full Scale</div>
             <div className="ret-name">Authority</div>
             <div className="ret-price"><sup>$</sup>2,200<span>/mo</span></div>
