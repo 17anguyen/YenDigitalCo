@@ -817,10 +817,10 @@ nav {
 }
 
 .cs-name {
-  font-family: var(--pc);
+  font-family: var(--hf);
   font-size: 1.35rem;
   font-weight: 400;
-  color: var(--di);
+  color: var(--pc);
   line-height: 1.2
 }
 
