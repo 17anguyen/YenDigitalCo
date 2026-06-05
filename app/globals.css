@@ -817,7 +817,7 @@ nav {
 }
 
 .cs-name {
-  font-family: var(--hf);
+  font-family: var(--pc);
   font-size: 1.35rem;
   font-weight: 400;
   color: var(--di);
