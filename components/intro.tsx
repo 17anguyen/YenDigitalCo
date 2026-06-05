@@ -34,7 +34,7 @@ export default function Intro() {
       g.addColorStop(0, '#030d16')
       g.addColorStop(0.15, '#092810')
       g.addColorStop(0.38, '#183322')
-      g.addColorStop(0.55, '#0E1B2A')
+      g.addColorStop(0.55, '#2a4a2e')
       g.addColorStop(0.72, '#0a1f14')
       g.addColorStop(0.88, '#0a2416')
       g.addColorStop(1, '#07160a')

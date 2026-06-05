@@ -1,7 +1,7 @@
 /* ============================================================
    Yên Digital Company — Main Stylesheet
    Brand: Deep Ink #0E1B2A · Mist Gray #EEF2F4
-          Jade Quiet #A8C3A0 · Warm Sand #faf5ed · Olive Grove #545b43
+          Jade Quiet #A8C3A0 · Warm Sand #faf5ed · Olive Grove #545b43 · Peach #FFBA89
    Fonts: Cormorant Garamond (headings) · Inter (body/UI)
    ============================================================ */
 
@@ -21,6 +21,7 @@
   --mg: #EEF2F4;
   --jq: #A8C3A0;
   --ws: #faf5ed;
+  --pc: #FFBA89;
   --hf: 'Cormorant Garamond', serif;
   --bf: 'Inter', sans-serif;
 }
@@ -187,8 +188,8 @@ nav {
 
 .grad {
   background: linear-gradient(var(--ga, -40deg),
-      #030d16 0%, #092810 12%, #183322 24%, #0E1B2A 36%,
-      #200830 50%, #0a2416 63%, #0E1B2A 74%, #0c1c32 86%, #07160a 100%);
+      #030d16 0%, #092810 12%, #183322 24%, #3a3f2e 36%,
+      #200830 50%, #0a2416 63%, #3a3f2e 74%, #2e3224 86%, #07160a 100%);
   background-size: 400% 400%;
   animation: driftGrad 9s ease infinite;
 }
@@ -211,7 +212,7 @@ nav {
   width: 85vw;
   height: 85vw;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(168, 195, 160, 0.28) 0%, rgba(100, 180, 120, 0.08) 38%, transparent 68%);
+  background: radial-gradient(circle, rgba(26, 58, 32, 0.55) 0%, rgba(26, 58, 32, 0.15) 38%, transparent 68%);
   top: -22vw;
   left: -18vw;
   animation: orbA 16s ease-in-out infinite;
@@ -226,7 +227,7 @@ nav {
   width: 65vw;
   height: 65vw;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(216, 191, 166, 0.22) 0%, rgba(200, 160, 100, 0.06) 40%, transparent 68%);
+  background: radial-gradient(circle, rgba(14, 27, 42, 0.7) 0%, rgba(14, 27, 42, 0.2) 40%, transparent 68%);
   bottom: -12vw;
   right: -8vw;
   animation: orbB 20s ease-in-out infinite;
@@ -291,9 +292,12 @@ nav {
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(ellipse 60% 55% at 18% 82%, rgba(168, 195, 160, 0.28) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 50% at 82% 12%, rgba(216, 191, 166, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 40% at 50% 48%, rgba(168, 195, 160, 0.1) 0%, transparent 55%);
+    radial-gradient(ellipse 60% 55% at 18% 82%, rgba(26, 58, 32, 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 50% at 82% 12%, rgba(14, 27, 42, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 50% 48%, rgba(26, 58, 32, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 45% 40% at 72% 78%, rgba(255, 186, 137, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 45% at 28% 22%, rgba(168, 195, 160, 0.12) 0%, transparent 58%),
+    radial-gradient(ellipse 35% 35% at 88% 55%, rgba(238, 242, 244, 0.07) 0%, transparent 52%);
   animation: glowPulse 5s ease-in-out infinite alternate;
 }
 
@@ -308,7 +312,7 @@ nav {
   font-size: 9px;
   letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: var(--jq);
+  color: var(--pc);
   margin-bottom: 2rem;
   animation: fadeUp 1s 0.5s both;
 }
@@ -324,7 +328,7 @@ nav {
 
 .hero-h1 em {
   font-style: italic;
-  color: var(--jq)
+  color: var(--pc)
 }
 
 .hero-h1 .deco {
@@ -372,6 +376,14 @@ nav {
 .btn-p:hover {
   background: var(--mg);
   transform: translateY(-1px)
+}
+
+.btn-p:disabled {
+  background: var(--pc);
+  color: var(--dk);
+  cursor: default;
+  transform: none;
+  opacity: 1
 }
 
 .btn-o {
@@ -687,7 +699,7 @@ nav {
 
 .svc {
   padding: 1.375rem 2rem;
-  border: 0.5px solid rgba(168, 195, 160, 0.07);
+  border: 0.5px solid rgba(250, 245, 237, 0.07);
   transition: all 0.35s;
   position: relative;
   overflow: hidden;
@@ -700,15 +712,15 @@ nav {
   left: 0;
   right: 0;
   height: 0.5px;
-  background: linear-gradient(to right, var(--jq), transparent);
+  background: linear-gradient(to right, var(--pc), transparent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s;
 }
 
 .svc:hover {
-  background: rgba(168, 195, 160, 0.03);
-  border-color: rgba(168, 195, 160, 0.18)
+  background: rgba(250, 245, 237, 0.03);
+  border-color: rgba(250, 245, 237, 0.18)
 }
 
 .svc:hover::before {
@@ -749,7 +761,7 @@ nav {
 
 .cs-card {
   padding: 1.25rem 2rem 2rem;
-  border: 0.5px solid rgba(168, 195, 160, 0.08);
+  border: 0.5px solid rgba(250, 245, 237, 0.08);
   position: relative;
   overflow: hidden;
   transition: border-color 0.35s, background 0.35s;
@@ -759,8 +771,8 @@ nav {
 }
 
 .cs-card:hover {
-  border-color: rgba(168, 195, 160, 0.22);
-  background: rgba(168, 195, 160, 0.025)
+  border-color: rgba(250, 245, 237, 0.22);
+  background: rgba(250, 245, 237, 0.025)
 }
 
 .cs-card::after {
@@ -770,7 +782,7 @@ nav {
   left: 0;
   right: 0;
   height: 0.5px;
-  background: linear-gradient(to right, var(--jq), transparent);
+  background: linear-gradient(to right, var(--pc), transparent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s;
@@ -807,13 +819,13 @@ nav {
   font-family: var(--hf);
   font-size: 1.35rem;
   font-weight: 400;
-  color: var(--mg);
+  color: var(--di);
   line-height: 1.2
 }
 
 .cs-what {
   font-size: 11.5px;
-  color: rgba(238, 242, 244, 0.42);
+  color: var(--mg);
   line-height: 1.85;
   font-weight: 300
 }
@@ -824,16 +836,16 @@ nav {
   gap: 0.5rem;
   margin-top: auto;
   padding-top: 0.75rem;
-  border-top: 0.5px solid rgba(168, 195, 160, 0.07)
+  border-top: 0.5px solid var(--di, rgba(168, 195, 160, 0.1));
 }
 
 .cs-tag {
   font-size: 8px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(168, 195, 160, 0.55);
+  color: var(--di);
   padding: 0.25rem 0.6rem;
-  border: 0.5px solid rgba(168, 195, 160, 0.15);
+  border: 0.5px solid var(--di, rgba(168, 195, 160, 0.1));
 }
 
 /* ─── GALLERY FILTERS ────────────────────────────────────────────────── */
@@ -1186,10 +1198,17 @@ nav {
   transition: all 0.3s;
 }
 
-.btn-ret:hover,
-.ret-card.featured .btn-ret {
+.btn-ret:hover {
   background: var(--jq);
   border-color: var(--jq);
+  color: var(--dk);
+  font-weight: 500
+}
+
+.ret-card.featured .btn-ret:hover,
+.ret-card.peach-hover .btn-ret:hover {
+  background: var(--pc);
+  border-color: var(--pc);
   color: var(--dk);
   font-weight: 500
 }
