@@ -1469,6 +1469,21 @@ footer {
   transform: scale(1.02);
 }
 
+/* ─── HAMBURGER — hidden on desktop ─────────────────────────────────── */
+.nav-burger {
+  display: none;
+}
+
+.burger-line {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--ws);
+  border-radius: 1px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center;
+}
+
 /* ─── MOBILE — stack all cards ──────────────────────────────────────── */
 @media (max-width: 768px) {
   nav {
@@ -1560,16 +1575,19 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    align-items: center;
+    gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.4rem;
+    padding: 0.5rem;
     z-index: 1100;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .burger-line.open:nth-child(1) {
-    transform: translateY(5.5px) rotate(45deg);
+    transform: translateY(7.5px) rotate(45deg);
   }
 
   .burger-line.open:nth-child(2) {
@@ -1577,22 +1595,8 @@ footer {
   }
 
   .burger-line.open:nth-child(3) {
-    transform: translateY(-5.5px) rotate(-45deg);
+    transform: translateY(-7.5px) rotate(-45deg);
   }
-}
-
-/* ─── HAMBURGER — hidden on desktop ─────────────────────────────────── */
-.nav-burger {
-  display: none;
-}
-
-.burger-line {
-  display: block;
-  width: 22px;
-  height: 0.5px;
-  background: var(--ws);
-  transition: transform 0.3s, opacity 0.3s;
-  transform-origin: center;
 }
 
 /* ─── MOBILE DRAWER ──────────────────────────────────────────────────── */
