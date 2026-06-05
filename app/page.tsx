@@ -52,7 +52,6 @@ export default function HomePage() {
             Yên<em />
             <span className="deco">Digital Company</span>
           </h1>
-          <span className="hero-tag">Serenity · Fortitude · Perseverance · Grace</span>
           <div className="hero-btns">
             <Link href="/video" className="btn-p">View Work</Link>
             <Link href="/contact" className="btn-o">Get in Touch</Link>
@@ -106,7 +105,7 @@ export default function HomePage() {
           <div className="about-text">
             <span className="s-label">About</span>
             <h2 className="s-title">Calm craft.<br />Built to last.</h2>
-            <p className="s-body">Yên Digital Company is a multimedia production and web management studio rooted in steady support and intentional storytelling. We specialize in nightlife, automotive, and event content — capturing the energy of a moment with cinematic precision.</p>
+            <p className="s-body">Yên Digital Company is a multimedia production and web management studio rooted in intentional storytelling and steady support. We specialize in nightlife, product, and event content. We strive to capture the energy of a moment with cinematic precision.</p>
             <p className="s-body">Every frame is considered. Every deliverable is crafted. Whether it&apos;s a full video production, a photo campaign, or a complete web presence, we bring the same quiet confidence to the work.</p>
             <a className="ig-link" href="https://www.instagram.com/livydoesmedia" target="_blank" rel="noopener noreferrer">↗ @livydoesmedia</a>
           </div>
@@ -123,17 +122,17 @@ export default function HomePage() {
           <div className="svc">
             <div className="svc-n">01</div>
             <div className="svc-name">Video Production</div>
-            <p className="svc-desc">Cinematic coverage of nightlife, automotive, and live events. From concept to final cut — slow pans, intentional transitions, and a visual style built around atmosphere and mood.</p>
+            <p className="svc-desc">Cinematic coverage from nightlife, automotive, and live events to products. From concept to final cut, slow pans, intentional transitions, and a visual style built around capturingatmosphere and energy.</p>
           </div>
           <div className="svc">
             <div className="svc-n">02</div>
             <div className="svc-name">Photography</div>
-            <p className="svc-desc">High-craft stills for events, car shoots, and brand campaigns. Natural light where possible, soft contrast always — images that feel considered, not corrected.</p>
+            <p className="svc-desc">High-craft stills for events, car shoots, and brand campaigns. Images that feel considered and not intentionally edited.</p>
           </div>
           <div className="svc">
             <div className="svc-n">03</div>
             <div className="svc-name">Web Management</div>
-            <p className="svc-desc">Digital presence built and maintained with the same care we bring to the lens. Clean, fast, and designed to last — from initial build to ongoing updates and strategy.</p>
+            <p className="svc-desc">Digital presence built and maintained with the same care we bring to the lens. Clean, fast, and designed to last. From initial build to ongoing updates and strategy. Trust us to breathe life into your vision.</p>
           </div>
         </div>
       </div>
@@ -144,40 +143,58 @@ export default function HomePage() {
       <div className="section">
         <span className="s-label">Client Work</span>
         <h2 className="s-title">Companies we&apos;ve<br />worked with</h2>
-        <p className="s-body">A selection of brands, venues, and businesses we&apos;ve supported — from one-off shoots to ongoing retainers.</p>
+        <p className="s-body">A selection of brands, venues, and businesses we&apos;ve supported from one-off shoots to ongoing retainers.</p>
         <div className="cs-grid">
-          <div className="cs-card">
+          <a className="cs-card" href="https://expresstubes.com/" target="_blank" rel="noopener noreferrer">
             <div className="cs-logo-box">ET</div>
             <div>
               <div className="cs-company">Express Tube</div>
               <div className="cs-name">Marketing &amp; Social Strategy</div>
             </div>
-            <p className="cs-what">Full-scale marketing retainer — content calendar, social management, and monthly analytics across Instagram and beyond. Scaled from part-time to a full marketing operation.</p>
+            <p className="cs-what">Full-scale marketing retainer and website management. Content calendar, social management, and monthly analytics across Instagram and beyond. A completely custom engineered and designed website solution. Scaled from part-time to a full marketing operation.</p>
             <div className="cs-tags">
               <span className="cs-tag">Marketing</span>
               <span className="cs-tag">Social Media</span>
-              <span className="cs-tag">Strategy</span>
+              <span className="cs-tag">Website</span>
             </div>
-          </div>
+          </a>
           {[
             { tags: ['Video', 'Tag Two'] },
-            { tags: ['Photography', 'Tag Two'] },
-            { tags: ['Web', 'Tag Two'] },
-            { tags: ['Nightlife', 'Tag Two'] },
-            { tags: ['Automotive', 'Tag Two'] },
+            // { tags: ['Photography', 'Tag Two'] },
+            // { tags: ['Web', 'Tag Two'] },
+            // { tags: ['Nightlife', 'Tag Two'] },
+            // { tags: ['Automotive', 'Tag Two'] },
+            // { tags: ['Marketing', 'Tag Two'] },
+            // { tags: ['Branding', 'Tag Two'] },
           ].map((item, i) => (
-            <div key={i} className="cs-card">
-              <div className="cs-logo-box">—</div>
+            <a key={i} className="cs-card" href="https://onebyfaith.co" target="_blank" rel="noopener noreferrer">
+              <div className="cs-logo-box">OBF</div>
               <div>
-                <div className="cs-company">Your Client</div>
-                <div className="cs-name">Your Project Title Here</div>
+                <div className="cs-company">One by Faith</div>
+                <div className="cs-name">Brand Sculpting and Website Management</div>
               </div>
-              <p className="cs-what">Describe what you did for this client in one or two sentences. Keep it specific — what did you shoot, build, or manage, and what did it achieve?</p>
+              <p className="cs-what">We worked with One by Faith from concept to completion to create a comprehensive brand identity and a custom website that reflects their values and mission. We helped them establish a brand identity and created guidlines. We creafted strong online presence that aligns with their brand vision. </p>
               <div className="cs-tags">
-                {item.tags.map(t => <span key={t} className="cs-tag">{t}</span>)}
+                <span className="cs-tag">Branding</span>
+                <span className="cs-tag">Website</span>
+                <span className="cs-tag">Marketing</span>
               </div>
-            </div>
+            </a>
           ))}
+
+          <a className="cs-card" href="https://zombieghostgames.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">ZGG</div>
+            <div>
+              <div className="cs-company">Zombie Ghost Games</div>
+              <div className="cs-name">Website Management and Content Creation</div>
+            </div>
+            <p className="cs-what">We worked with Zombie Ghost Games to manage their website and create engaging content. </p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+              <span className="cs-tag">Website</span>
+            </div>
+          </a>
         </div>
       </div>
 
