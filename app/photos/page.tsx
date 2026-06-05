@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
 import { PHOTOS, EVENTS } from '@/lib/photos'
 
-const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive']
+const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive', 'Promotional']
 
 /* ── Icons ─────────────────────────────────────────────────────────────── */
 const GridIcon = () => (
