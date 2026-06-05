@@ -151,11 +151,11 @@ export default function HomePage() {
           </a>
           {[
             { tags: ['Video', 'Tag Two'] },
-            // { tags: ['Photography', 'Tag Two'] },
-            // { tags: ['Web', 'Tag Two'] },
-            // { tags: ['Nightlife', 'Tag Two'] },
-            // { tags: ['Automotive', 'Tag Two'] },
-            // { tags: ['Marketing', 'Tag Two'] },
+            { tags: ['Photography', 'Tag Two'] },
+            { tags: ['Web', 'Tag Two'] },
+            { tags: ['Nightlife', 'Tag Two'] },
+            { tags: ['Automotive', 'Tag Two'] },
+            { tags: ['Marketing', 'Tag Two'] },
             // { tags: ['Branding', 'Tag Two'] },
           ].map((item, i) => (
             <a key={i} className="cs-card" href="https://onebyfaith.co" target="_blank" rel="noopener noreferrer">
@@ -172,6 +172,62 @@ export default function HomePage() {
               </div>
             </a>
           ))}
+
+
+          <a className="cs-card" href="https://zombieghostgames.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">ZGG</div>
+            <div>
+              <div className="cs-company">Zombie Ghost Games</div>
+              <div className="cs-name">Website Management and Content Creation</div>
+            </div>
+            <p className="cs-what">We worked with Zombie Ghost Games to manage their website and create engaging content. </p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+              <span className="cs-tag">Website</span>
+            </div>
+          </a>
+
+          <a className="cs-card" href="https://www.insomniac.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">I</div>
+            <div>
+              <div className="cs-company">Insomniac Games</div>
+              <div className="cs-name">Website Management and Content Creation</div>
+            </div>
+            <p className="cs-what">We worked with Insomniac events capturing live shows in both photo and video. </p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+            </div>
+          </a>
+
+          <a className="cs-card" href="https://zombieghostgames.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">ZGG</div>
+            <div>
+              <div className="cs-company">Zombie Ghost Games</div>
+              <div className="cs-name">Website Management and Content Creation</div>
+            </div>
+            <p className="cs-what">We worked with Zombie Ghost Games to manage their website and create engaging content. </p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+              <span className="cs-tag">Website</span>
+            </div>
+          </a>
+
+          <a className="cs-card" href="https://zombieghostgames.com/" target="_blank" rel="noopener noreferrer">
+            <div className="cs-logo-box">ZGG</div>
+            <div>
+              <div className="cs-company">Zombie Ghost Games</div>
+              <div className="cs-name">Website Management and Content Creation</div>
+            </div>
+            <p className="cs-what">We worked with Zombie Ghost Games to manage their website and create engaging content. </p>
+            <div className="cs-tags">
+              <span className="cs-tag">Video</span>
+              <span className="cs-tag">Photography</span>
+              <span className="cs-tag">Website</span>
+            </div>
+          </a>
 
           <a className="cs-card" href="https://zombieghostgames.com/" target="_blank" rel="noopener noreferrer">
             <div className="cs-logo-box">ZGG</div>
