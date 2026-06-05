@@ -11,11 +11,11 @@ function videoUrl(p: string) {
 type VideoItem = { src?: string; t: string; c: string[]; grad?: string }
 
 const VIDS: VideoItem[] = [
-  { src: videoUrl('/videos/senpai-squad-recap-2026.mp4'), t: 'Senpai Squad Recap', c: ['Nightlife'] },
-  { src: videoUrl('/videos/lil-texas-recap.mp4'), t: 'Lil Texas Recap', c: ['Nightlife'] },
-  { src: videoUrl('/videos/juelz-b2b-san-holo.mp4'), t: 'Juelz b2b San Holo', c: ['Nightlife'] },
-  { src: videoUrl('/videos/bout-final.mp4'), t: 'Bout', c: ['Automotive', 'Events'] },
-  { src: videoUrl('/videos/dj-isaac-2025.mp4'), t: 'DJ Isaac 2025', c: ['Nightlife'] },
+  { src: videoUrl('/senpai-squad-recap-2026.mp4'), t: 'Senpai Squad Recap', c: ['Nightlife'] },
+  { src: videoUrl('/lil-texas-recap.mp4'), t: 'Lil Texas Recap', c: ['Nightlife'] },
+  { src: videoUrl('/juelz-b2b-san-holo.mp4'), t: 'Juelz b2b San Holo', c: ['Nightlife'] },
+  { src: videoUrl('/bout-final.mp4'), t: 'Bout', c: ['Automotive', 'Events'] },
+  { src: videoUrl('/dj-isaac-2025.mp4'), t: 'DJ Isaac 2025', c: ['Nightlife'] },
 ]
 
 const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive']
