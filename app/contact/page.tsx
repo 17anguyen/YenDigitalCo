@@ -1,3 +1,5 @@
+import ContactForm from '../../components/contact-form'
+
 export default function ContactPage() {
   return (
     <>
@@ -34,44 +36,8 @@ export default function ContactPage() {
             </div>
           </div>
           <div>
-            {/* TODO: wire up form action (Formspree, Netlify Forms, etc.) */}
-            <form className="ct-form">
-              <div className="form-row2">
-                <div className="fg">
-                  <label className="flbl">First name</label>
-                  <input className="fin" type="text" />
-                </div>
-                <div className="fg">
-                  <label className="flbl">Last name</label>
-                  <input className="fin" type="text" />
-                </div>
-              </div>
-              <div className="fg">
-                <label className="flbl">Email</label>
-                <input className="fin" type="email" />
-              </div>
-              <div className="fg">
-                <label className="flbl">Company / Brand (optional)</label>
-                <input className="fin" type="text" />
-              </div>
-              <div className="fg">
-                <label className="flbl">Service interested in</label>
-                <select className="fin" style={{ cursor: 'pointer' }}>
-                  <option value="">Select a service</option>
-                  <option>Video Production</option>
-                  <option>Photography</option>
-                  <option>Web Management</option>
-                  <option>Full Package</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div className="fg">
-                <label className="flbl">Tell us about your project</label>
-                <textarea className="fin fta" />
-              </div>
-              <button type="submit" className="btn-p" style={{ alignSelf: 'flex-start' }}>Send Message</button>
-              <p className="ct-note">We&apos;ll respond within 48 hours. All inquiries handled with discretion.</p>
-            </form>
+            {/* Client-side contact form handles submission and button text */}
+            <ContactForm />
           </div>
         </div>
       </div>
