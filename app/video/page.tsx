@@ -3,14 +3,14 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { videoUrl } from '@/lib/videos'
 import BannerVideo from '@/components/banner-video'
 
-type VideoItem = { src?: string; t: string; c: string[]; grad?: string }
+type VideoItem = { src?: string; poster?: string; t: string; c: string[]; grad?: string }
 
 const VIDS: VideoItem[] = [
-  { src: videoUrl('/senpai-squad-recap-2026.mp4'), t: 'Senpai Squad Recap', c: ['Nightlife'] },
-  { src: videoUrl('/lil-texas-recap.mp4'), t: 'Lil Texas Recap', c: ['Nightlife'] },
-  { src: videoUrl('/juelz-b2b-san-holo.mp4'), t: 'Juelz b2b San Holo', c: ['Nightlife'] },
-  { src: videoUrl('/final-bout.mp4'), t: 'Bout', c: ['Automotive', 'Events'] },
-  { src: videoUrl('/dj-isaac-2025.mp4'), t: 'DJ Isaac 2025', c: ['Nightlife'] },
+  { src: videoUrl('/senpai-squad-recap-2026.mp4'), poster: '/images/thumbs/senpai-squad.jpg', t: 'Senpai Squad Recap', c: ['Nightlife'] },
+  { src: videoUrl('/lil-texas-recap.mp4'), poster: '/images/thumbs/lil-texas.jpg', t: 'Lil Texas Recap', c: ['Nightlife'] },
+  { src: videoUrl('/juelz-b2b-san-holo.mp4'), poster: '/images/thumbs/juelz-san-holo.jpg', t: 'Juelz b2b San Holo', c: ['Nightlife'] },
+  { src: videoUrl('/final-bout.mp4'), poster: '/images/thumbs/final-bout.jpg', t: 'Bout', c: ['Automotive', 'Events'] },
+  { src: videoUrl('/dj-isaac-2025.mp4'), poster: '/images/thumbs/dj-isaac.jpg', t: 'DJ Isaac 2025', c: ['Nightlife'] },
 ]
 
 const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive']
@@ -39,10 +39,11 @@ function VideoCard({ item, onOpen }: { item: VideoItem; onOpen: () => void }) {
         <video
           ref={videoRef}
           src={item.src}
+          poster={item.poster}
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.75s ease' }}
           className="gi-bg"
         />
@@ -94,6 +95,7 @@ function VideoLightbox({ item, onClose }: { item: VideoItem; onClose: () => void
         <video
           ref={videoRef}
           src={item.src}
+          poster={item.poster}
           controls
           playsInline
           style={{ width: '100%', maxHeight: '85vh', display: 'block', outline: 'none' }}

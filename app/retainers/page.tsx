@@ -18,7 +18,7 @@ export default function RetainersPage() {
           <div>
             <span className="ret-type-label">Marketing</span>
             <h2 className="s-title" style={{ marginBottom: '0.5rem' }}>Marketing retainers</h2>
-            <p className="s-body">Social content, strategy, and analytics — consistently executed so your brand stays visible and your audience keeps growing.</p>
+            <p className="s-body">Social content, strategy, and analytics consistently executed so your brand stays visible and your audience keeps growing.</p>
           </div>
         </div>
         <div className="ret-grid">
@@ -69,7 +69,7 @@ export default function RetainersPage() {
               <li>Reel / video content (8/mo)</li>
               <li>Paid social ad management (budget separate)</li>
               <li>Weekly strategy calls</li>
-              <li>Priority turnaround — 24 hr response</li>
+              <li>Priority turnaround</li>
             </ul>
             <div className="ret-cta"><Link href="/contact" className="btn-ret" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>Get Started</Link></div>
           </div>
@@ -82,7 +82,7 @@ export default function RetainersPage() {
           <div>
             <span className="ret-type-label sand">Website</span>
             <h2 className="s-title" style={{ marginBottom: '0.5rem' }}>Website retainers</h2>
-            <p className="s-body">Your site, always running. Updates handled, performance monitored, and your digital presence kept sharp — without you chasing it.</p>
+            <p className="s-body">Your site, always running. Updates handled, performance monitored, and your digital presence kept sharp without you chasing it.</p>
           </div>
         </div>
         <div className="ret-grid">
@@ -131,7 +131,7 @@ export default function RetainersPage() {
               <li>Full SEO management &amp; reporting</li>
               <li>Core Web Vitals + monthly optimization</li>
               <li>Google Analytics / GSC management</li>
-              <li>Priority support — 24 hr response</li>
+              <li>Priority support</li>
               <li>Monthly strategy call (60 min)</li>
               <li>New page builds (1/mo included)</li>
             </ul>
@@ -140,7 +140,7 @@ export default function RetainersPage() {
         </div>
 
         <p className="ret-note">
-          All retainers are billed monthly with a 3-month minimum commitment. Prices shown are starting rates — custom packages available for larger brands or multi-location businesses. A one-time onboarding fee may apply.{' '}
+          All retainers are billed monthly with a 3-month minimum commitment. Prices shown are starting rates. Custom packages available for larger brands or multi-location businesses. A one-time onboarding fee may apply.{' '}
           <span style={{ color: 'rgba(168,195,160,0.5)' }}>Bundle a marketing + website retainer for 15% off both.</span>
         </p>
       </div>
