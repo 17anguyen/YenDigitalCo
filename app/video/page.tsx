@@ -7,12 +7,12 @@ type VideoItem = { src?: string; poster?: string; t: string; c: string[]; client
 
 const VIDS: VideoItem[] = [
   { src: videoUrl('/senpai-squad-recap-2026.mp4'), poster: '/images/thumbs/senpai-squad.jpg', t: 'Senpai Squad Recap', c: ['Nightlife'] },
-  { src: videoUrl('/lil-texas-recap.mp4'),         poster: '/images/thumbs/lil-texas.jpg',    t: 'Lil Texas Recap',   c: ['Nightlife'] },
-  { src: videoUrl('/juelz-b2b-san-holo.mp4'),      poster: '/images/thumbs/juelz-san-holo.jpg', t: 'Juelz b2b San Holo', c: ['Nightlife'] },
-  { src: videoUrl('/final-bout.mp4'),              poster: '/images/thumbs/final-bout.jpg',   t: 'Bout',              c: ['Automotive', 'Events'] },
-  { src: videoUrl('/dj-isaac-2025.mp4'),           poster: '/images/thumbs/dj-isaac.jpg',     t: 'DJ Isaac 2025',     c: ['Nightlife'] },
-  { src: '/videos/et-marketing-lip-head-styles.mp4',        t: 'Lip Head Styles',          c: ['Promotional'], client: 'express-tubes' },
-  { src: '/videos/et-marketing-star-orifice-marble-cap.mp4', t: 'Star Orifice Marble Cap', c: ['Promotional'], client: 'express-tubes' },
+  { src: videoUrl('/lil-texas-recap.mp4'), poster: '/images/thumbs/lil-texas.jpg', t: 'Lil Texas Recap', c: ['Nightlife'] },
+  { src: videoUrl('/juelz-b2b-san-holo.mp4'), poster: '/images/thumbs/juelz-san-holo.jpg', t: 'Juelz b2b San Holo', c: ['Nightlife'] },
+  { src: videoUrl('/final-bout.mp4'), poster: '/images/thumbs/final-bout.jpg', t: 'Bout', c: ['Automotive', 'Events'] },
+  { src: videoUrl('/dj-isaac-2025.mp4'), poster: '/images/thumbs/dj-isaac.jpg', t: 'DJ Isaac 2025', c: ['Nightlife'] },
+  { src: videoUrl('/ET Marketing- lip head styles.mp4'), poster: '', t: 'Lip Head Styles', c: ['Promotional'], client: 'express-tubes' },
+  { src: videoUrl('/ET Marketing- star orifice marble cap.mp4'), poster: '', t: 'Star Orifice Marble Cap', c: ['Promotional'], client: 'express-tubes' },
 ]
 
 const FILTERS = ['All', 'Nightlife', 'Events', 'Automotive', 'Promotional']
