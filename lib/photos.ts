@@ -1,7 +1,3 @@
-/* ============================================================
-   Photo gallery data
-   Add new events by appending to EVENTS and PHOTOS arrays.
-   ============================================================ */
 
 export type Photo = {
   src: string
@@ -17,28 +13,28 @@ export type Event = {
 }
 
 export const EVENTS: Event[] = [
-  { id: 'hoang-hiyu-2025',        label: 'Hoang @ Hiyu 2025',      year: 2025 },
-  { id: 'dj-isaac-2025',          label: 'DJ Isaac 2025',           year: 2025 },
-  { id: 'senpai-squad-2026',      label: 'Senpai Squad 2026',       year: 2026 },
-  { id: 'lil-texas-2026',         label: 'Lil Texas 2026',          year: 2026 },
-  { id: 'juelz-san-holo-2026',    label: 'Juelz b2b San Holo',      year: 2026 },
-  { id: 'kawaii-rave-texas-2026', label: 'Kawaii Rave Texas 2026',  year: 2026 },
-  { id: 'express-tubes',          label: 'Express Tubes',           year: 2025 },
+  { id: 'hoang-hiyu-2025', label: 'Hoang @ Hiyu 2025', year: 2025 },
+  { id: 'dj-isaac-2025', label: 'DJ Isaac 2025', year: 2025 },
+  { id: 'senpai-squad-2026', label: 'Senpai Squad 2026', year: 2026 },
+  { id: 'lil-texas-2026', label: 'Lil Texas 2026', year: 2026 },
+  { id: 'juelz-san-holo-2026', label: 'Juelz b2b San Holo', year: 2026 },
+  { id: 'kawaii-rave-texas-2026', label: 'Kawaii Rave Texas 2026', year: 2026 },
+  { id: 'express-tubes', label: 'Express Tubes', year: 2025 },
 ]
 
 export const PHOTOS: Photo[] = [
   // ── Hoang @ Hiyu 2025 ──────────────────────────────────────
-  { src: '/images/hoang-hiyu-2025/DSCF2183.jpg',   event: 'hoang-hiyu-2025', category: 'Nightlife' },
-  { src: '/images/hoang-hiyu-2025/DSCF2198.jpg',   event: 'hoang-hiyu-2025', category: 'Nightlife' },
-  { src: '/images/hoang-hiyu-2025/DSCF2391.jpg',   event: 'hoang-hiyu-2025', category: 'Nightlife' },
-  { src: '/images/hoang-hiyu-2025/DSCF2518.jpg',   event: 'hoang-hiyu-2025', category: 'Nightlife' },
+  { src: '/images/hoang-hiyu-2025/DSCF2183.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
+  { src: '/images/hoang-hiyu-2025/DSCF2198.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
+  { src: '/images/hoang-hiyu-2025/DSCF2391.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
+  { src: '/images/hoang-hiyu-2025/DSCF2518.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
   { src: '/images/hoang-hiyu-2025/DSCF2642-2.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
   { src: '/images/hoang-hiyu-2025/DSCF2867-2.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
   { src: '/images/hoang-hiyu-2025/DSCF2887-2.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
-  { src: '/images/hoang-hiyu-2025/DSCF3000.jpg',   event: 'hoang-hiyu-2025', category: 'Nightlife' },
+  { src: '/images/hoang-hiyu-2025/DSCF3000.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
   { src: '/images/hoang-hiyu-2025/DSCF3007-2.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
   { src: '/images/hoang-hiyu-2025/DSCF3015-2.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
-  { src: '/images/hoang-hiyu-2025/DSCF3215.jpg',   event: 'hoang-hiyu-2025', category: 'Nightlife' },
+  { src: '/images/hoang-hiyu-2025/DSCF3215.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
   { src: '/images/hoang-hiyu-2025/DSCF3379-2.jpg', event: 'hoang-hiyu-2025', category: 'Nightlife' },
 
   // ── DJ Isaac 2025 ───────────────────────────────────────────
@@ -85,9 +81,9 @@ export const PHOTOS: Photo[] = [
   // ── Juelz b2b San Holo ──────────────────────────────────────
   { src: '/images/juelz-san-holo-2026/DSC02145_2.jpg', event: 'juelz-san-holo-2026', category: 'Nightlife' },
   { src: '/images/juelz-san-holo-2026/DSC02229_2.jpg', event: 'juelz-san-holo-2026', category: 'Nightlife' },
-  { src: '/images/juelz-san-holo-2026/DSC02400.jpg',   event: 'juelz-san-holo-2026', category: 'Nightlife' },
-  { src: '/images/juelz-san-holo-2026/DSC02442.jpg',   event: 'juelz-san-holo-2026', category: 'Nightlife' },
-  { src: '/images/juelz-san-holo-2026/DSC02462.jpg',   event: 'juelz-san-holo-2026', category: 'Nightlife' },
+  { src: '/images/juelz-san-holo-2026/DSC02400.jpg', event: 'juelz-san-holo-2026', category: 'Nightlife' },
+  { src: '/images/juelz-san-holo-2026/DSC02442.jpg', event: 'juelz-san-holo-2026', category: 'Nightlife' },
+  { src: '/images/juelz-san-holo-2026/DSC02462.jpg', event: 'juelz-san-holo-2026', category: 'Nightlife' },
   { src: '/images/juelz-san-holo-2026/DSC02476_2.jpg', event: 'juelz-san-holo-2026', category: 'Nightlife' },
 
   // ── Express Tubes — Promotional Materials ───────────────────
