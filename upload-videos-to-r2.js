@@ -1,10 +1,3 @@
-#!/usr/bin/env node
-/**
- * Upload local videos to Cloudflare R2
- * Requires: npm install wrangler
- * Setup: wrangler login (for browser auth) or set CF_API_TOKEN environment variable
- */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
