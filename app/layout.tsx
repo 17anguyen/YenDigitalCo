@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { Inter, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/navigation'
+import CursorGlow from '@/components/cursor-glow'
 import Footer from '@/components/footer'
 import Intro from '@/components/intro'
-import CursorGlow from '@/components/cursor-glow'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const cormorant = Cormorant_Garamond({
