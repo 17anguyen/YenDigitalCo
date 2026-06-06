@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { videoUrl } from '@/lib/videos'
+import HeroRipple from '@/components/hero-ripple'
 
 function WorkCard({ src, videoSrc, label, cat, href, aspectRatio }: {
   src?: string
@@ -45,6 +46,7 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="home-hero grad page-in">
+        <HeroRipple />
         <div className="hero-glow" />
         <div className="hero-content">
           <span className="eyebrow">Multimedia Production &amp; Web Management</span>
