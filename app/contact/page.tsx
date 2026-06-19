@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import ContactForm from '../../components/contact-form'
 import BannerVideo from '../../components/banner-video'
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with Yên Digital Company. Based in Seattle, WA — we work with nightlife venues, event promoters, and brands on video, photography, and web projects.',
+  alternates: { canonical: '/contact' },
+  openGraph: { url: '/contact', title: 'Contact | Yên Digital Company', description: 'Get in touch — based in Seattle, WA. Video production, photography, and web management.' },
+}
 
 export default function ContactPage() {
   return (
