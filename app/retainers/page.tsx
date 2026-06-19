@@ -1,4 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Retainer Packages',
+  description: 'Monthly marketing and website retainer packages from Yên Digital Company. Social media management, content strategy, SEO monitoring, and web maintenance — three tiers for every stage.',
+  alternates: { canonical: '/retainers' },
+  openGraph: { url: '/retainers', title: 'Retainer Packages | Yên Digital Company', description: 'Monthly marketing and website retainers. Social content, strategy, analytics, and web management — built for steady growth.' },
+}
 
 export default function RetainersPage() {
   return (

@@ -89,7 +89,7 @@ export default function HomePage() {
           <div className="about-visual" style={{ position: 'relative' }}>
             <Image
               src="/images/about-portrait.jpg"
-              alt="Portrait"
+              alt="Yên Digital Company — multimedia production and web management, Seattle WA"
               fill
               sizes="50vw"
               style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
